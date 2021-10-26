@@ -12,7 +12,49 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.deletBtn {
+  display: inline-block;
+  padding: 10px;
+  margin: 20px;
+  border-style: none;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: lightcoral;
+}
+.add{
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-style: none;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color:rgb(23, 175, 99);
+}
+.decress{
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-style: none;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color:rgb(207, 192, 58);
+}
+.counternum{
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-style: none;
+  font-size: 18px;
+  font-weight: bold;
 
+  border-radius: 10px;
+  background-color:rgb(228, 225, 201);
+}
+.continer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
