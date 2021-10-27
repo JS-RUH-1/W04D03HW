@@ -3,7 +3,7 @@ import Counter from "./Counter";
 let arr = [];
 let showList;
 function ToDo() {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState();
 
   function list(e) {
     e.preventDefault();
@@ -13,9 +13,9 @@ function ToDo() {
     arr.push(e.target.parentElement.children[1].value);
     showList = arr.map((x) => {
       return (
-        <div className="content">
+        <div >
           <li>{x}</li>
-          <button onClick={removeItems}>Delete</button>
+          <button className="del"onClick={removeItems}>Delete</button>
           <Counter></Counter>
         </div>
       );
@@ -30,8 +30,8 @@ function ToDo() {
   return (
     <div >
       <p>What Need To Be Done </p>
-      <input type="text" ></input>
-      <button  onClick={list}>Add</button>
+      <input type="text" className="inp" ></input>
+      <button type="submit" className="add"onClick={list}>Add</button>
       {showList}
     </div>
   );

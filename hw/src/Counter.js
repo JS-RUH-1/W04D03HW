@@ -17,10 +17,10 @@ function Counter() {
     
     }
     return(
-    <div>
-    <button  onClick={plus}>Increase</button>
+    <div className="content">
+    <button className="btn" onClick={plus}>Increase</button>
     <h4>{count}</h4>
-    <button onClick={minusCounter}>Decrease</button>  
+    <button className="btn"  onClick={minusCounter}>Decrease</button>  
     </div>
     )}
 export default Counter;
