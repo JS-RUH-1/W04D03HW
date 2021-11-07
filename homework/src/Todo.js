@@ -11,7 +11,6 @@ class TodoList extends React.Component {
 		};
 
         this.myRef = React.createRef();
-        this.removeTodo = this.removeTodo.bind(this);
 	}
     addTodo(todoValue) {
         let updatedArray = this.state.todo.concat({value:todoValue, count:0});
@@ -42,20 +41,20 @@ class TodoList extends React.Component {
                                 <div id={key} style={divStyle}>
                                     <li key={key}>{item.value}</li>
                                     <div style={{paddingLeft: '10px'}}></div> 
-                                    <button onClick={ (e) => {e.view["$r"].removeTodo(key)}}>Delete</button>
+                                    <button onClick={ (e) => {this.removeTodo(key)}}>Delete</button>
                                     <div style={{paddingLeft: '10px'}}></div> 
 
-                                    <button onClick={ (e) => {e.view["$r"].count(key,"-")}}>-</button>
+                                    <button onClick={ (e) => {this.count(key,"-")}}>-</button>
                                     <div style={{paddingLeft: '10px'}}></div> 
 
                                     <p>{item.count}</p>
                                     <div style={{paddingLeft: '10px'}}></div> 
 
-                                    <button onClick={ (e) => {e.view["$r"].count(key,"+")}}>+</button>
+                                    <button onClick={ (e) => this.count(key,"+")}>+</button>
                                 </div>
                             )
                         }
-                    })}
+                    },this)}
                 </ul>
 				<label>
 					<h3>What need to be done</h3>
